@@ -1,3 +1,3 @@
-export interface FooType {
+export type FooType = {
     foo: string;
 }

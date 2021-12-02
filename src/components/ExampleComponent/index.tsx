@@ -2,14 +2,19 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { FooType } from '../../types/FooType';
 
+// We import all of the styles in the corresponding .module.css file.
+// Alternatively, you can use inline styling or styled components for your components.
 import styles from './ExampleComponent.module.css';
 import sharedStyles from '../shared/Shared.module.css';
+
+// Redux imports
 import { getFoo, setFoo, deleteFoo, someCallableProcess } from '../../redux/actions/foo';
 import { RootState } from '../../redux/store';
 import { connect, ConnectedProps } from 'react-redux';
 
+// Specific props for this component
 type CustomProps = {
-    foo: FooType
+    customFoo: FooType
 }
 
 /* Redux integration code below:
@@ -44,9 +49,10 @@ const mapDispatchToProps = {
 const connector = connect(mapStateToProps, mapDispatchToProps);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-// combine all of our prop types
+// Combine all of our prop types
 type Props = RouteComponentProps & CustomProps & PropsFromRedux
 
+// Sample state typing for example
 type State = {
     bar: string;
 }
@@ -80,4 +86,6 @@ class ExampleComponent extends React.Component<Props, State> {
     }
 }
 
-export default withRouter(ExampleComponent);
+// Wrapping the component in withRouter gives us access to the history object
+// Wrapping the component in connect gives us access to the redux state
+export default withRouter(connector(ExampleComponent));

@@ -44,8 +44,27 @@ const exampleFooPayload = {
 // A thunk is a middleware of sorts (think of it as a way to perform logic "between" two redux actions)
 // For example, if my application needed to submit an order, I would use a thunk to make the API call in,
 // and then call the specific Redux Action related to the outcome of the API call. (success if it worked, failure if it didn't)
-
 // This works great for error handling as well :)
+
+// You don't need to use thunks if you don't want to, but it's a good idea to use them.
+/*
+    Alternatively, you can handle the logic in your application code:
+
+    const mapDispatchToProps = (dispatch: Dispatch<RootStateOrAny>) => ({
+        ...
+    })
+
+    const someFunction = (foo: FooType) => {
+        // dispatch your actions here
+        try {
+            // dispatch succes
+        }
+        catch (error) {
+            // dispatch failure
+        }
+    })
+*/
+
 export const someCallableProcess = (): ThunkAction<
     void,
     RootStateOrAny,
