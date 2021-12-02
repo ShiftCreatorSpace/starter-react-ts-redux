@@ -1,22 +1,24 @@
-# React Typescript & Redux (just add water) Starter Code
+# React Typescript & Redux Starter Code
 
-granularity: file & code structure, react router and redux integration, example actions, reducers, and types
+Template granularity: File & code structure, react router and redux integration, example actions, reducers, and types.
 
-added by @eric
+Too much boilerplate? Try React Contexts instead of redux (https://reactjs.org/docs/context.html)!
 
-## getting started
+Added by @zhongeric
 
-Fork this repo and off you go!
+## Getting started
 
-## what is this?
+Fork this repo, in the base directory run `npm install && npm start`.
+
+## What is this?
 
 Great question. This is the standard typescript create-react-app with react-router and notably, _redux_, improved file structure and code organization. It has all of the code needed for a property stored in redux "foo", including actions, reducers, and types.
 
-## lol ok why don't I just use create-react-app
+## Lol ok why don't I just use create-react-app
 
 Have fun adding redux by hand :)
 
-## how do I deploy & publish this?
+## Hhow do I deploy & publish this?
 
 I recommend Netlify (https://www.netlify.com/), it's free and super simple to use. Make an account and set up a new site from Git. Then link your Github and select your project's repo. And boom, it'll auto deploy whenever you push to main / master.
 
@@ -24,11 +26,11 @@ P.S. If you're getting errors when deploying related to warnings being treated a
 
 If you don't want to use netlify, there are ways of hosting it yourself ranging from using a web proxy like Nginx to a totally comprehensive solution like Google Cloud App Engine or AWS.
 
-## can I contribute?
+## Can I contribute?
 
 Yes! Just make a PR
 
-## here's the lame create react app stuff below
+## Here's the lame create react app stuff below
 
 ---
 
